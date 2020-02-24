@@ -1,0 +1,263 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author Alberto
+ */
+public class Chasis {
+    private String estructura;
+    private String material;
+    private String serie;
+
+    public Chasis(String estructura, String material, String serie) {
+        this.estructura = estructura;
+        this.material = material;
+        this.serie = serie;
+    }
+public Chasis(){
+ }
+
+    public String getEstructura() {
+        return estructura;
+    }
+
+    public void setEstructura(String estructura) {
+        this.estructura = estructura;
+    }
+
+    public String getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(String material) {
+        this.material = material;
+    }
+
+    public String getSerie() {
+        return serie;
+    }
+
+    public void setSerie(String serie) {
+        this.serie = serie;
+    }
+    
+    public void conduciendo(){
+        System.out.println("Conduciendo");
+    }
+}
+
+
+
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author Alberto
+ */
+public class Llanta {
+    private int diametro;
+    private int ancho;
+    private String condicion;
+
+    public Llanta(int diametro, int ancho, String condicion) {
+        this.diametro = diametro;
+        this.ancho = ancho;
+        this.condicion = condicion;
+    }
+    public Llanta(){
+ }
+
+
+    public int getDiametro() {
+        return diametro;
+    }
+
+    public void setDiametro(int diametro) {
+        this.diametro = diametro;
+    }
+
+    public int getAncho() {
+        return ancho;
+    }
+
+    public void setAncho(int ancho) {
+        this.ancho = ancho;
+    }
+
+    public String getCondicion() {
+        return condicion;
+    }
+
+    public void setCondicion(String condicion) {
+        this.condicion = condicion;
+    }
+    
+   public void rodando(){
+       System.out.println("rodando");
+   }
+   
+   
+   }
+    
+
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author Alberto
+ */
+public class Motor {
+    private int velocidad;
+    private String marca;
+    private int modelo;
+
+    public Motor(int velocidad, String marca, int modelo) {
+        this.velocidad = velocidad;
+        this.marca = marca;
+        this.modelo = modelo;
+    }
+    public Motor(){
+ }
+
+
+    public int getVelocidad() {
+        return velocidad;
+    }
+
+    public void setVelocidad(int velocidad) {
+        this.velocidad = velocidad;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public int getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(int modelo) {
+        this.modelo = modelo;
+    }
+    
+    public void conduciendo(){
+        
+        System.out.println("conduciendo");
+    }
+    }
+    
+    
+    
+    public class Vehiculo {
+   private String color;
+    private String marca;
+   private int anio;
+   private Motor tipo;
+   private Llanta condicion;
+   private Chasis estructura;
+
+    public Vehiculo(String color, String marca, int anio, Motor cilindros, Llanta condicion, Chasis estructura) {
+        this.color = color;
+        this.marca = marca;
+        this.anio = anio;
+        this.tipo = cilindros;
+        this.condicion = condicion;
+        this.estructura = estructura;
+    }
+public Vehiculo(){}
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public int getAnio() {
+        return anio;
+    }
+
+    public void setAnio(int anio) {
+        this.anio = anio;
+    }
+
+    public Motor getCilindros() {
+        return tipo;
+    }
+
+    public void setCilindros(Motor cilindros) {
+        this.tipo = cilindros;
+    }
+
+    public Llanta getCondicion() {
+        return condicion;
+    }
+
+    public void setCondicion(Llanta condicion) {
+        this.condicion = condicion;
+    }
+
+    public Chasis getEstructura() {
+        return estructura;
+    }
+
+    public void setEstructura(Chasis estructura) {
+        this.estructura = estructura;
+    }
+
+   
+
+    
+   
+   
+}
+
+   
+   
+   public class ComposicionVehiculo {
+
+   
+    public static void main(String[] args) {
+     Vehiculo vel=new Vehiculo ();
+     
+   vel.setMarca("Audi"); 
+   vel.setColor("azul");
+   vel.setAnio(2019);
+   
+     
+   
+        System.out.println("La informacion de su auto al momento es:\n"+vel.getMarca()+"\n"+vel.getColor()+"\n"+vel.getAnio());
+       
+    }
+    
+}
+    
+
+
